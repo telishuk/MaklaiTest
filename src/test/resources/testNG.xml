@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="firstTestSuite" verbose="1" >
+    <test name="SmokeTest">
+        <parameter name="ageChild1" value="2"/>
+        <parameter name="ageChild2" value="10"/>
+        <classes>
+            <class name="tests.TestMainForm"/>
+        </classes>
+    </test>
+</suite>
