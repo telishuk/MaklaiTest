@@ -13,6 +13,7 @@ import java.util.Set;
 
 public class TestMainForm extends Fixture {
 
+
     @Test
     public void clickNavigationMenu() throws Exception, NoSuchLocatorException {
         hotel.mainPage.openPage();
@@ -52,7 +53,7 @@ public class TestMainForm extends Fixture {
         driver.switchTo().window(newWindowHandle);
         hotel.mainPage.clickButtonBookNow();
         Thread.sleep(2000);
-        hotel.screenShotMaker.takeScreenShot("Reservation");
+        hotel.screenShotMaker.takeFullPageScreenShot("Reservation");
         Assert.assertEquals(hotel.mainPage.web.getElementsText("ArrivalDate"), "2019-01-24");
         Assert.assertEquals(hotel.mainPage.web.getElementsText("DepartureDate"), "2019-01-25");
         Assert.assertEquals(hotel.mainPage.web.getElementsText("NumberGuests"), "3 Взрослых,\n" +
